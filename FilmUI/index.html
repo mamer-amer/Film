@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+     
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="toastr.css">
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="card">
+                  <div class="card-header">
+                     <h4>Search Films</h4>
+                  </div>
+                  <div class="card-body">
+                     <div class="form-horizontal">
+                        <div class="row">
+                           <div class="col-md-4">
+                              <div class="form-group">
+                                 <input type="text" style="margin-top: 6px;" placeholder="Search movie with name / ID"
+                                    class="form-control" name="search" id="btnInputSearch"  required/>
+                              </div>
+                           </div>
+                           <div class="col-md-8 col-sm-12 col-xs-12 col-lg-8">
+                              <input type="button" id="btnSearch" class="btn btn-lg btn-info" name="search"
+                                 value="Search"/>
+                              
+                              <label class="searchRadioButtons btn btn-info btn-lg">
+                              <input type="radio" id="btnSearchByName" value="searchByName" checked name="btnRadio">Search By Name
+                              </label>
+                              <label class="searchRadioButtons btn btn-info btn-lg">
+                              <input type="radio" id="btnSearchByID" value="searchByID" name="btnRadio">Search By ID
+                              </label>
+                              <input type="button" id="btnAddFilm" class="btn btn-lg btn-info" name="AddFilm"
+                                 value="+Add new Film" />
+                              <input type="button" id="btnShowAllFilms" class="btn btn-info btn-lg"
+                                 name="btnShowAllFilms" value="Show All Films" />
+                              <select class="ownSelect" id="type">
+                                 <option value="JSON">JSON</option>
+                                 <option value="XML">XML</option>
+                              </select>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- movies section after search -->
+         <div class="movieSection" style="width: 100%;">
+        
+         </div>
+      </div>
+      <!-- add modal -->
+      <div class="modal fade" id="addFilmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+               <h5 class="modal-title" id="exampleModalLabel">Add New Film</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <form id="movieForm">
+               <div class="modal-body">
+                  <div class="btnJsonAndXml">
+                     <label class="radio-inline"><input type="radio"  value="JSON"
+                        name="optradio" checked>SEND AS JSON</label>
+                     <label class="radio-inline"><input type="radio" value="XML"
+                        name="optradio">SEND AS XML</label>
+                  </div>
+                  <div class="form-group">
+                     <label for="title">Title :</label>
+                     <input type="text" class="form-control" id="title" placeholder="Enter Film Title">
+                  </div>
+                  <div class="form-group">
+                     <label for="title">Director :</label>
+                     <input type="text" class="form-control" id="director" placeholder="Enter Director Name">
+                  </div>
+                  <div class="form-group">
+                     <label for="title">Stars :</label>
+                     <input type="text" class="form-control" id="stars" placeholder="Enter Stars Name">
+                  </div>
+                  <div class="form-group">
+                     <label for="title">Released Year :</label>
+                     <input type="text" class="form-control" id="releasedYear" placeholder="Enter Released Year">
+                  </div>
+                  <div class="form-group">
+                     <label for="title">Review :</label>
+                     <textarea rows="6" class="form-control" id="review" placeholder="Reivew.."></textarea>
+                  </div>
+                  <div class="modal-footer border-top-0 d-flex justify-content-end">
+                     <button type="button"  id="btnSave" class="btn btn-info">Save</button>
+                  </div>
+            </form>
+            </div>
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+         crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+         crossorigin="anonymous"></script>
+     
+      <script src="xmlToJson.js"></script>
+      <script src="xmlToJson.min.js"></script>
+      <script src="http://goessner.net/download/prj/jsonxml/json2xml.js"></script>
+      
+      <!-- main.js -->
+      <script src="main.js"></script>
+      <script src="toastr.js"></script>
+   </body>
+</html>

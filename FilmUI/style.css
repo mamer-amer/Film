@@ -1,0 +1,384 @@
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800");
+.card {
+background-color: #fff;
+border-radius: 10px;
+border: none;
+position: relative;
+margin-bottom: 30px;
+box-shadow: 0 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1),
+0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+0 0.25rem 0.53125rem rgba(90, 97, 105, 0.12),
+0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+}
+.card .card-header {
+border-bottom-color: #f9f9f9;
+line-height: 30px;
+-ms-grid-row-align: center;
+align-self: center;
+width: 100%;
+padding: 10px 25px;
+display: flex;
+align-items: center;
+}
+.container {
+margin-top: 40px;
+}
+.card .card-header,
+.card .card-body,
+.card .card-footer {
+background-color: transparent;
+padding: 20px 25px;
+}
+.card-header:first-child {
+border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.card-header {
+padding: 0.75rem 1.25rem;
+padding-bottom: 0px !important;
+padding-top: 8px !important;
+background: black !important;
+margin-bottom: 0;
+color: white !important;
+border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+/* box */
+.box-content {
+padding: 20px;
+background-color: #efefef;
+}
+#apply {
+margin: -0.25em 0 0 0;
+}
+.someBlock {
+background: #fff no-repeat 50% 50%;
+background-image: url("image.png"),
+url("http://www.picshare.ru/uploads/170127/Fny9X5rrN2.png");
+background-size: contain;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+0 6px 6px rgba(0, 0, 0, 0.23);
+height: 50vh;
+margin: 5vh auto;
+position: relative;
+}
+.ck-editor__editable_inline {
+min-height: 250px !important;
+}
+* {
+box-sizing: border-box;
+margin: 0;
+}
+html,
+body {
+margin: 0;
+/* background: black; */
+font-family: "Montserrat", helvetica, arial, sans-serif;
+font-size: 14px;
+font-weight: 400;
+}
+.movie_card {
+position: relative;
+display: block;
+width: 100%;
+height: 350px;
+/* margin: 100px auto; */
+overflow: hidden;
+border-radius: 10px;
+transition: all 0.4s;
+}
+.movie_card:hover {
+transform: scale(1.02);
+transition: all 0.4s;
+}
+.movie_card .info_section {
+position: relative;
+width: 100%;
+height: 100%;
+background-blend-mode: multiply;
+z-index: 2;
+border-radius: 10px;
+}
+.movie_card .info_section .movie_header {
+position: relative;
+padding: 25px;
+height: 50%;
+}
+.movie_card .info_section .movie_header h1 {
+color: #fff;
+font-weight: 400;
+}
+.movie_card .info_section .movie_header h4 {
+color: #9ac7fa;
+font-weight: 400;
+}
+.movie_card .info_section .movie_header .minutes {
+display: inline-block;
+margin-top: 10px;
+color: #fff;
+padding: 5px;
+border-radius: 5px;
+border: 1px solid rgba(255, 255, 255, 0.13);
+}
+.movie_card .info_section .movie_header .type {
+display: inline-block;
+color: #cee4fd;
+margin-left: 10px;
+}
+.movie_card .info_section .movie_header .locandina {
+position: relative;
+float: left;
+margin-right: 20px;
+height: 120px;
+box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+}
+.movie_card .info_section .movie_desc {
+padding: 25px;
+height: 38%;
+}
+.movie_card .info_section .movie_desc .text {
+color: #cfd6e1;
+}
+.movie_card .info_section .movie_social {
+height: 10%;
+padding-left: 15px;
+padding-bottom: 20px;
+}
+.movie_card .info_section .movie_social ul {
+list-style: none;
+padding: 0;
+}
+.movie_card .info_section .movie_social ul li {
+display: inline-block;
+color: rgba(255, 255, 255, 0.4);
+transition: color 0.3s;
+transition-delay: 0.15s;
+margin: 0 10px;
+}
+.movie_card .info_section .movie_social ul li:hover {
+transition: color 0.3s;
+color: rgba(255, 255, 255, 0.8);
+}
+.movie_card .info_section .movie_social ul li i {
+font-size: 19px;
+cursor: pointer;
+}
+.movie_card .blur_back {
+position: absolute;
+top: 0;
+z-index: 1;
+height: 100%;
+right: 0;
+background-size: cover;
+border-radius: 11px;
+}
+@media screen and (min-width: 768px) {
+.movie_header {
+width: 60%;
+}
+.movie_desc {
+width: 50%;
+}
+.info_section {
+background: linear-gradient(to right, #07554efc 50%, black 100%);
+}
+.blur_back {
+width: 80%;
+background-position: -100% 10% !important;
+}
+}
+@media screen and (max-width: 768px) {
+.movie_card {
+width: 95%;
+margin: 70px auto;
+min-height: 350px;
+height: auto;
+}
+.blur_back {
+width: 100%;
+background-position: 50% 50% !important;
+}
+.movie_header {
+width: 100%;
+margin-top: 85px;
+}
+.movie_desc {
+width: 100%;
+}
+.info_section {
+background: linear-gradient(to right, #07554efc 50%, black 100%);
+display: inline-grid;
+}
+}
+#bright {
+box-shadow: 0px 0px 150px -45px rgba(255, 51, 0, 0.5);
+}
+#bright:hover {
+box-shadow: 0px 0px 120px -55px rgba(255, 51, 0, 0.5);
+}
+.bright_back {
+background: url("https://occ-0-2433-448.1.nflxso.net/art/cd5c9/3e192edf2027c536e25bb5d3b6ac93ced77cd5c9.jpg");
+}
+#tomb {
+box-shadow: 0px 0px 150px -45px rgba(19, 160, 134, 0.6);
+}
+#tomb:hover {
+box-shadow: 0px 0px 120px -55px rgba(19, 160, 134, 0.6);
+}
+.tomb_back {
+background: url("https://fsmedia.imgix.net/cd/c9/5e/ba/4817/4d9a/93f0/c776ec32ecbc/lara-crofts-neck-looks-unnatural-in-the-new-poster-for-tomb-raider.png");
+}
+#ave {
+box-shadow: 0px 0px 150px -45px rgba(199, 147, 75, 0.7);
+margin-bottom: 200px;
+}
+#ave:hover {
+box-shadow: 0px 0px 120px -55px rgba(199, 147, 75, 0.7);
+}
+.ave_back {
+background: url("https://www.gannett-cdn.com/-mm-/c03fd140debe8ad4c05cf81a5cad7ad61a12ce52/c=0-1580-2985-3266&r=x803&c=1600x800/local/-/media/2017/06/09/USATODAY/USATODAY/636326272873599176-Black-Panther-Teaser.jpg");
+}
+.form-control {
+padding: 0.75rem 1.75rem !important;
+}
+.btn-info {
+background-color: #0a5750cf !important;
+}
+@media (min-width: 992px) {
+.container {
+max-width: 90%;
+}
+}
+.btnJsonAndXml {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
+/* modal css */
+.container {
+padding: 2rem 0rem;
+}
+h4 {
+margin: 2rem 0rem;
+}
+.panel {
+border-radius: 4px;
+padding: 1rem;
+margin-top: 0.2rem;
+background-color: #f5f5f5;
+color: #323b40;
+}
+.panel.panel-blue {
+background-color: #e0f5ff;
+color: #00a5fa;
+}
+.panel.panel-big-height {
+min-height: 150px;
+}
+.item {
+border-radius: 4px;
+padding: 0.5rem;
+margin: 0.2rem;
+}
+.item.item-blue {
+background-color: #b9e5fe;
+color: #00a5fa;
+}
+.item.item-green {
+background-color: #b7e0dc;
+color: #019888;
+}
+.item.item-lime {
+background-color: #c7e8c8;
+color: #42b045;
+}
+.item.item-yellow {
+background-color: #ffeeba;
+color: #ff9901;
+}
+.item.item-pink {
+background-color: #fabad0;
+color: #ef075f;
+}
+.item.item-red {
+background-color: #fec9c6;
+color: #fd3d08;
+}
+.item.item-big-width {
+min-width: 380px;
+}
+.modal-header {
+background: #052c28e3;
+color: white
+}
+.close {
+color: white !important;
+}
+.radio-inline {
+padding: 10px;
+}
+#btnSave {
+float: right;
+}
+.ownSelect {
+/* border: none; */
+padding: 11px;
+}
+.searchRadioButtons {
+margin-top: 8px !important;
+}
+.movie_card {
+margin-bottom: 20px;
+}
+.pager div {
+float: left;
+border: 1px solid gray;
+margin: 5px;
+padding: 10px;
+}
+.pager div.disabled {
+opacity: 0.25;
+}
+.pager .pageNumbers a {
+display: inline-block;
+padding: 0 10px;
+color: gray;
+}
+.pager .pageNumbers a.active {
+color: orange;
+}
+.pager {
+overflow: hidden;
+}
+.paginate-no-scroll .items div {
+height: 250px;
+}
+/* loading css */
+.loading { margin: auto; }
+.loading span {
+line-height: 32px;
+margin-left: 12px;
+font-size: 16px;
+vertical-align: middle;
+}
+.loading img { vertical-align: middle; }
+.loading_wrp {
+background-color: #FFF;
+display: block;
+height: 100%;
+left: 0;
+opacity: 0.5;
+filter: alpha(opacity=50);
+position: absolute;
+top: 0;
+width: 100%;
+z-index: 1020;
+}
+.loading_wrp .x16 span {
+line-height: 16px;
+font-size: 12px;
+margin-left: 6px;
+}
+.loading_wrp .x32 img {
+width: 32px;
+height: 32px;
+}
